@@ -6,12 +6,12 @@ ms.date: 08/13/2020
 ms.topic: troubleshooting
 description: Kubernetes の展開と Windows ノードの参加で発生する一般的な問題の解決方法。
 keywords: kubernetes、linux、コンパイル
-ms.openlocfilehash: f96d90f2ab4f7cdfea942badab8fb277c40cb621
-ms.sourcegitcommit: aa139e6e77a27b8afef903fee5c7ef338e1c79d4
+ms.openlocfilehash: 2853386acb564fca768c4f9d8f3b12922670ba18
+ms.sourcegitcommit: 160405a16d127892b6e2897efa95680f29f0496a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88251605"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990735"
 ---
 # <a name="troubleshooting-kubernetes"></a>Kubernetes のトラブルシューティング #
 このページでは、Kubernetes のセットアップ、ネットワーク、および展開に関する一般的な問題について説明します。
@@ -83,7 +83,7 @@ Windows Server バージョン1903のユーザーは、次のレジストリの�
 ```
 
 ### <a name="containers-on-my-flannel-host-gw-deployment-on-azure-cannot-reach-the-internet"></a>Azure 上の Flannel ホスト-gw デプロイのコンテナーがインターネットに接続できない ###
-Azure で Flannel をホスト gw モードでデプロイする場合、パケットは Azure 物理ホスト vSwitch を経由する必要があります。 ユーザーは、ノードに割り当てられているサブネットごとに、"仮想アプライアンス" 型の [ユーザー定義ルート](https://docs.microsoft.com/azure/virtual-network/virtual-networks-udr-overview#user-defined) をプログラムする必要があります。 これを行うには、Azure portal ( [こちら](https://docs.microsoft.com/azure/virtual-network/tutorial-create-route-table-portal)の例を参照) または Azure CLI を使用 `az` します。 次に示すのは、IP 10.0.0.4 が指定されたノードに対して az コマンドを使用し、それぞれのポッドサブネット 10.244.0.0/24 を使用して、"MyRoute" という名前の UDR の一例です。
+Azure で Flannel をホスト gw モードでデプロイする場合、パケットは Azure 物理ホスト vSwitch を経由する必要があります。 ユーザーは、ノードに割り当てられているサブネットごとに、"仮想アプライアンス" 型の [ユーザー定義ルート](/azure/virtual-network/virtual-networks-udr-overview#user-defined) をプログラムする必要があります。 これを行うには、Azure portal ( [こちら](/azure/virtual-network/tutorial-create-route-table-portal)の例を参照) または Azure CLI を使用 `az` します。 次に示すのは、IP 10.0.0.4 が指定されたノードに対して az コマンドを使用し、それぞれのポッドサブネット 10.244.0.0/24 を使用して、"MyRoute" という名前の UDR の一例です。
 ```
 az network route-table create --resource-group <my_resource_group> --name BridgeRoute 
 az network route-table route create  --resource-group <my_resource_group> --address-prefix 10.244.0.0/24 --route-table-name BridgeRoute  --name MyRoute --next-hop-type VirtualAppliance --next-hop-ip-address 10.0.0.4 
@@ -177,7 +177,7 @@ Get-NetAdapter | ? Name -Like "vEthernet (Ethernet*"
 多くの場合、ホストのネットワークアダプターが "イーサネット" ではない場合に、start.ps1 スクリプトの [InterfaceName](https://github.com/Microsoft/SDN/blob/master/Kubernetes/flannel/l2bridge/start.ps1#L6) パラメーターを変更することができます。 それ以外の場合は、スクリプトの出力を参照し `start-kubelet.ps1` て、仮想ネットワークの作成中にエラーが発生していないかどうかを確認します。
 
 
-### <a name="i-am-still-seeing-problems-what-should-i-do"></a>まだ問題が発生しています。 どうすればよいですか。 ###
+### <a name="i-am-still-seeing-problems-what-should-i-do"></a>まだ問題が発生しています。   どうすればいいですか。 ###
 ネットワークまたはホストに追加の制約があり、ノード間で特定の種類の通信が妨げられている場合があります。 次のことを確認します。
   - 選択したネットワークトポロジ ( `l2bridge` または) が正しく構成されていること `overlay`
   - ポッドからと思われるトラフィックが許可されていること

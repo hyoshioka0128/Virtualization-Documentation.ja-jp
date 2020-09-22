@@ -3,15 +3,16 @@ title: Windows の詳細ネットワークオプション
 description: Windows コンテナー用の高度なネットワーク。
 keywords: Docker, コンテナー
 author: jmesser81
+ms.author: jgerend
 ms.date: 03/27/2018
 ms.topic: how-to
 ms.assetid: 538871ba-d02e-47d3-a3bf-25cda4a40965
-ms.openlocfilehash: 7b533a90587c0853be1fe93090d23b3c34fa2386
-ms.sourcegitcommit: bb18e6568393da748a6d511d41c3acbe38c62668
+ms.openlocfilehash: cd56e5d8b0865af4cbb56835e603d9d21d67a981
+ms.sourcegitcommit: 160405a16d127892b6e2897efa95680f29f0496a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88161731"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990835"
 ---
 # <a name="advanced-network-options-in-windows"></a>Windows での高度なネットワーク オプション
 
@@ -21,7 +22,7 @@ Windows に固有の機能を活用するために、いくつかのネットワ
 
 > すべてのネットワーク ドライバーに適用されます。
 
-Docker で使用するコンテナー ホスト ネットワークを作成するときに、`-o com.docker.network.windowsshim.interface` オプションで複数のネットワーク アダプターを (コンマで区切って) 指定することにより、[スイッチ埋め込みチーミング](https://docs.microsoft.com/windows-server/virtualization/hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming#a-namebkmksswitchembeddedaswitch-embedded-teaming-set)を活用できます。
+Docker で使用するコンテナー ホスト ネットワークを作成するときに、`-o com.docker.network.windowsshim.interface` オプションで複数のネットワーク アダプターを (コンマで区切って) 指定することにより、[スイッチ埋め込みチーミング](/windows-server/virtualization/hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming#a-namebkmksswitchembeddedaswitch-embedded-teaming-set)を活用できます。
 
 ```
 C:\> docker network create -d transparent -o com.docker.network.windowsshim.interface="Ethernet 2", "Ethernet 3" TeamedNet
@@ -115,7 +116,7 @@ C:\> reg delete HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip6\Para
 
 #### <a name="linux-containers-on-windows"></a>Linux Containers on Windows
 
-**最新情報:** 現在、_Moby Linux VM を使用せずに_ Linux と Windows のコンテナーをサイド バイ サイドで実行できるよう取り組んでいます。 詳しくは、[Linux Containers on Windows (LCOW) に関するこちらのブログ記事](https://blog.docker.com/2017/11/docker-for-windows-17-11/)をご覧ください。 [開始](https://docs.microsoft.com/virtualization/windowscontainers/quick-start/quick-start-windows-10-linux)方法を次に示します。
+**最新情報:** 現在、_Moby Linux VM を使用せずに_ Linux と Windows のコンテナーをサイド バイ サイドで実行できるよう取り組んでいます。 詳しくは、[Linux Containers on Windows (LCOW) に関するこちらのブログ記事](https://blog.docker.com/2017/11/docker-for-windows-17-11/)をご覧ください。 [開始](../quick-start/quick-start-windows-10-linux.md)方法を次に示します。
 > 注意: LCOW は Moby Linux VM に代わるものであり、既定の HNS "nat" 内部 vSwitch を使用します。
 
 #### <a name="moby-linux-vms-use-dockernat-switch-with-docker-for-windows-a-product-of-docker-ce"></a>Moby Linux VM では、Docker for Windows ([Docker CE](https://www.docker.com/community-edition) の製品) と共に DockerNAT スイッチを使用しています。
@@ -178,7 +179,7 @@ l2bridge ドライバーを使って作成されたコンテナー ネットワ�
 PS C:\> restart-service hns
 PS C:\> restart-service docker
 ```
-* もう 1 つの選択肢は、'-o com.docker.network.windowsshim.interface' オプションを利用し、透過ネットワークの外部 vSwitch をコンテナー ホストでまだ使用されていない特定のネットワーク アダプター (すなわち、帯域外で作成された vSwitch で利用されているネットワーク アダプター以外のネットワーク アダプター) に関連付けることです。 「-O」オプションについては、このドキュメントの「 [1 つのコンテナーホストに複数の透過的ネットワークを作成する](advanced.md#creating-multiple-transparent-networks-on-a-single-container-host)」で詳しく説明します。
+* もう 1 つの選択肢は、'-o com.docker.network.windowsshim.interface' オプションを利用し、透過ネットワークの外部 vSwitch をコンテナー ホストでまだ使用されていない特定のネットワーク アダプター (すなわち、帯域外で作成された vSwitch で利用されているネットワーク アダプター以外のネットワーク アダプター) に関連付けることです。 「-O」オプションについては、このドキュメントの「 [1 つのコンテナーホストに複数の透過的ネットワークを作成する](advanced.md#creating-multiple-transparent-networks-on-a-single-container-host) 」で詳しく説明します。
 
 
 ## <a name="windows-server-2016-work-arounds"></a>Windows Server 2016 の回避策
