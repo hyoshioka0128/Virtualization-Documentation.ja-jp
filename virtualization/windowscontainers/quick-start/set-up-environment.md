@@ -7,12 +7,12 @@ ms.author: crwilhit
 ms.date: 11/12/2019
 ms.topic: quickstart
 ms.assetid: bb9bfbe0-5bdc-4984-912f-9c93ea67105f
-ms.openlocfilehash: 3efd5594afbcf1a9123ea13e046193f18bfa29bc
-ms.sourcegitcommit: bb18e6568393da748a6d511d41c3acbe38c62668
+ms.openlocfilehash: b081984fe364b68db3b5f32b6e008e7bdb9f8b09
+ms.sourcegitcommit: 94901df98f58c9ffdf1b9e91379ca13daa239166
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88161831"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90738902"
 ---
 # <a name="get-started-prep-windows-for-containers"></a>作業の開始:コンテナー用の Windows を準備する
 
@@ -80,9 +80,22 @@ Windows Server に Docker をインストールするには、Microsoft によ�
 
 後で Docker を更新する場合は、次のことを行います。
 
-- `Get-Package -Name Docker -ProviderName DockerMsftProvider` を実行して、インストールされているバージョンを確認します
-- `Find-Package -Name Docker -ProviderName DockerMsftProvider` を実行して、最新のバージョンを検索します
-- 準備ができたら、`Install-Package -Name Docker -ProviderName DockerMsftProvider -Update -Force` を実行してアップグレードした後、`Start-Service Docker` を実行します
+- 以下を実行して、インストールされているバージョンを確認します:
+```powershell
+Get-Package -Name Docker -ProviderName DockerMsftProvider
+```
+- 以下を実行して、最新のバージョンを検索します:
+```powershell
+Find-Package -Name Docker -ProviderName DockerMsftProvider
+```
+- 準備ができたら、以下を実行してアップグレードした後:
+```powershell
+Install-Package -Name Docker -ProviderName DockerMsftProvider -Update -Force
+```
+以下を実行します: 
+```powershell
+Start-Service Docker
+```
 
 # <a name="windows-10"></a>[Windows 10](#tab/Windows-10-Client)
 
