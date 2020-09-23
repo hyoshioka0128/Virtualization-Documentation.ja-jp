@@ -73,9 +73,9 @@
 
 # 参照先
 ## [基本イメージのサービス ライフサイクル](deploy-containers/base-image-lifecycle.md)
-## [ウイルス対策の最適化](https://docs.microsoft.com/windows-hardware/drivers/ifs/anti-virus-optimization-for-windows-containers)
+## [ウイルス対策の最適化](/windows-hardware/drivers/ifs/anti-virus-optimization-for-windows-containers)
 ## [Container Platform のツール](deploy-containers/containerd.md)
-## [コンテナー OS イメージの使用許諾契約書 (EULA)](Images_EULA.md)
+## [コンテナー OS イメージの使用許諾契約書 (EULA)](./images-eula.md)
 
 # 参照情報
 ## [既知の問題](manage-containers/known-issues.md)

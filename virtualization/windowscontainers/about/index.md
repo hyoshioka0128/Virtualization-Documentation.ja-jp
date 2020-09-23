@@ -3,15 +3,16 @@ title: Windows コンテナーについて
 description: コンテナーは、オンプレミスおよびクラウドの多様な環境にわたって Windows アプリなどのアプリをパッケージ化して実行するためのテクノロジです。 このトピックでは、Docker や Azure Kubernetes Service の使用法を含め、Microsoft、Windows、および Azure がコンテナーでのアプリの開発とデプロイにどのように役立つかについて説明します。
 keywords: Docker, コンテナー
 author: taylorb-microsoft
+ms.author: jgerend
 ms.date: 10/22/2019
 ms.topic: overview
 ms.assetid: 8e273856-3620-4e58-9d1a-d1e06550448
-ms.openlocfilehash: 0759eef043ed347622f81c7b54a86c673144465d
-ms.sourcegitcommit: 186ebcd006eeafb2b51a19787d59914332aad361
+ms.openlocfilehash: 25221fdfac5507d169adcaf95d050bcb06c7baeb
+ms.sourcegitcommit: 160405a16d127892b6e2897efa95680f29f0496a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87984755"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990865"
 ---
 # <a name="windows-and-containers"></a>Windows とコンテナー
 
@@ -24,13 +25,13 @@ ms.locfileid: "87984755"
 Microsoft では、コンテナーでのアプリの開発とデプロイに役立つ多数のツールとプラットフォームを提供しています。
 
 - [Docker Desktop](https://store.docker.com/editions/community/docker-ce-desktop-windows) を使用した開発およびテストのために、<strong>Windows ベースまたは Linux ベースのコンテナーを Windows 10 で実行します</strong>。これにより、Windows に組み込まれているコンテナー機能を利用することができます。 また、[Windows Server でネイティブにコンテナーを実行する](../quick-start/set-up-environment.md?tabs=Windows-Server)こともできます。
-- Docker、Docker Compose、Kubernetes、Helm、およびその他の便利なテクノロジのサポートを含む、[Visual Studio での強力なコンテナー サポート](https://docs.microsoft.com/visualstudio/containers/overview) および [Visual Studio Code](https://code.visualstudio.com/docs/azure/docker) を使用して、<strong>Windows ベースのコンテナーを開発、テスト、発行、デプロイ</strong>します。
+- Docker、Docker Compose、Kubernetes、Helm、およびその他の便利なテクノロジのサポートを含む、[Visual Studio での強力なコンテナー サポート](/visualstudio/containers/overview) および [Visual Studio Code](https://code.visualstudio.com/docs/azure/docker) を使用して、<strong>Windows ベースのコンテナーを開発、テスト、発行、デプロイ</strong>します。
 - Visual Studio と Visual Studio Code 内から直接プッシュおよびプルして、他のユーザーが使用できるようにパブリック DockerHub に、または組織の独自の開発とデプロイのためにプライベート [Azure Container Registry](https://azure.microsoft.com/services/container-registry/) に<strong>アプリをコンテナー イメージとして発行</strong>します。
 - <strong>Azure (またはその他のクラウド) に大規模にコンテナーをデプロイします</strong>。
 
-  - Azure Container Registry などのコンテナー レジストリからアプリ (コンテナー イメージ) をプルし、[Azure Kubernetes Service (AKS)](https://docs.microsoft.com/azure/aks/intro-kubernetes) や [Azure Service Fabric](https://docs.microsoft.com/azure/service-fabric/) などのオーケストレーターを使用して大規模にデプロイおよび管理します。
+  - Azure Container Registry などのコンテナー レジストリからアプリ (コンテナー イメージ) をプルし、[Azure Kubernetes Service (AKS)](/azure/aks/intro-kubernetes) や [Azure Service Fabric](/azure/service-fabric/) などのオーケストレーターを使用して大規模にデプロイおよび管理します。
   - Azure Kubernetes Service は、コンテナーを Azure の仮想マシンにデプロイし、数十、数百、または数千個であってもそれらを大規模に管理します。 Azure の仮想マシンは、カスタマイズされた Windows Server イメージ (Windows ベースのアプリをデプロイしている場合)、またはカスタマイズされた Ubuntu Linux イメージ (Linux ベースのアプリをデプロイしている場合) のいずれかを実行します。
-- [AKS エンジンを使用した Azure Stack](https://docs.microsoft.com/azure-stack/user/azure-stack-kubernetes-aks-engine-overview) (Linux コンテナーでのプレビュー段階) または [OpenShift を使用した Azure Stack](https://docs.microsoft.com/azure/virtual-machines/linux/openshift-azure-stack) を使って、<strong>コンテナーをオンプレミスにデプロイ</strong>します。 また、Windows Server に自分で Kubernetes をセットアップすることもできます (「[Windows で使用する Kubernetes](../kubernetes/getting-started-kubernetes-windows.md)」を参照)。さらに、Microsoft では、[RedHat OpenShift Container Platform で Windows コンテナー](https://techcommunity.microsoft.com/t5/Networking-Blog/Managing-Windows-containers-with-Red-Hat-OpenShift-Container/ba-p/339821)を実行するためのサポートについても取り組んでいます。
+- [AKS エンジンを使用した Azure Stack](/azure-stack/user/azure-stack-kubernetes-aks-engine-overview) (Linux コンテナーでのプレビュー段階) または [OpenShift を使用した Azure Stack](/azure/virtual-machines/linux/openshift-azure-stack) を使って、<strong>コンテナーをオンプレミスにデプロイ</strong>します。 また、Windows Server に自分で Kubernetes をセットアップすることもできます (「[Windows で使用する Kubernetes](../kubernetes/getting-started-kubernetes-windows.md)」を参照)。さらに、Microsoft では、[RedHat OpenShift Container Platform で Windows コンテナー](https://techcommunity.microsoft.com/t5/Networking-Blog/Managing-Windows-containers-with-Red-Hat-OpenShift-Container/ba-p/339821)を実行するためのサポートについても取り組んでいます。
 
 ## <a name="how-containers-work"></a>コンテナーのしくみ
 
@@ -96,9 +97,9 @@ Microsoft では、独自のコンテナー イメージを構築するための
 - クラスタ ノードのアフィニティ
 
 Windows コンテナーでは、さまざまな種類のオーケストレーターを使用できます。Microsoft では次のオプションを提供しています。
-- [Azure Kubernetes Service (AKS)](https://docs.microsoft.com/azure/aks/intro-kubernetes) - マネージド Azure Kubernetes Service を使用します
-- [Azure Service Fabric](https://docs.microsoft.com/azure/service-fabric/) - マネージド サービスを使用します
-- [AKS エンジンを使用した Azure Stack](https://docs.microsoft.com/azure-stack/user/azure-stack-kubernetes-aks-engine-overview) - オンプレミスの Azure Kubernetes Service を使用します
+- [Azure Kubernetes Service (AKS)](/azure/aks/intro-kubernetes) - マネージド Azure Kubernetes Service を使用します
+- [Azure Service Fabric](/azure/service-fabric/) - マネージド サービスを使用します
+- [AKS エンジンを使用した Azure Stack](/azure-stack/user/azure-stack-kubernetes-aks-engine-overview) - オンプレミスの Azure Kubernetes Service を使用します
 - [Windows 上の Kubernetes](../kubernetes/getting-started-kubernetes-windows.md) - ユーザー自身が Windows 上に Kubernetes を設定します
 
 ## <a name="try-containers-on-windows"></a>Windows でコンテナーを試す
@@ -107,4 +108,4 @@ Windows Server または Windows 10 でコンテナーの使用を開始する�
 > [!div class="nextstepaction"]
 > [はじめに: コンテナー用の環境を構成する](../quick-start/set-up-environment.md)
 
-自分のシナリオに適した Azure サービスを決定するには、[Azure コンテナー サービス](https://azure.microsoft.com/product-categories/containers/)と[アプリケーションをホストするために使用する Azure サービスの選択](https://docs.microsoft.com/azure/architecture/guide/technology-choices/compute-decision-tree)に関する記事を参照してください。
+自分のシナリオに適した Azure サービスを決定するには、[Azure コンテナー サービス](https://azure.microsoft.com/product-categories/containers/)と[アプリケーションをホストするために使用する Azure サービスの選択](/azure/architecture/guide/technology-choices/compute-decision-tree)に関する記事を参照してください。

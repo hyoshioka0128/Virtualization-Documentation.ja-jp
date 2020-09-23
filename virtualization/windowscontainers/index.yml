@@ -7,12 +7,12 @@ metadata:
   ms.topic: landing-page
   author: cwilhit
   ms.date: 07/06/2020
-  ms.openlocfilehash: 89aaf7c237b3e860cd099027779f185e931d1671
-  ms.sourcegitcommit: 186ebcd006eeafb2b51a19787d59914332aad361
+  ms.openlocfilehash: 51660b31763a3c5b8c3bcae0d0ca03fb8925c5a8
+  ms.sourcegitcommit: 160405a16d127892b6e2897efa95680f29f0496a
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 08/07/2020
-  ms.locfileid: "87985066"
+  ms.lasthandoff: 09/22/2020
+  ms.locfileid: "90990695"
 landingContent:
 - title: おすすめコンテンツ
   linkLists:
@@ -29,27 +29,27 @@ landingContent:
   - linkListType: overview
     links:
     - text: Windows コンテナーについて
-      url: /virtualization/windowscontainers/about/
+      url: ./about/index.md
     - text: システム要件
-      url: /virtualization/windowscontainers/deploy-containers/system-requirements
+      url: ./deploy-containers/system-requirements.md
     - text: よく寄せられる質問
-      url: /virtualization/windowscontainers/about/faq
+      url: ./about/faq.md
 - title: 開始するには
   linkLists:
   - linkListType: get-started
     links:
     - text: 環境を設定する
-      url: /virtualization/windowscontainers/quick-start/set-up-environment
+      url: ./quick-start/set-up-environment.md
     - text: 最初のコンテナーを実行する
-      url: /virtualization/windowscontainers/quick-start/run-your-first-container
+      url: ./quick-start/run-your-first-container.md
     - text: サンプル アプリをコンテナー化する
-      url: /virtualization/windowscontainers/quick-start/building-sample-app
+      url: ./quick-start/building-sample-app.md
 - title: チュートリアル
   linkLists:
   - linkListType: tutorial
     links:
     - text: Windows コンテナーの構築
-      url: /virtualization/windowscontainers/manage-docker/manage-windows-dockerfile
+      url: ./manage-docker/manage-windows-dockerfile.md
     - text: AKS で実行する
       url: /azure/aks/windows-container-cli
     - text: Service Fabric で実行する
@@ -61,28 +61,28 @@ landingContent:
   - linkListType: concept
     links:
     - text: Docker
-      url: /virtualization/windowscontainers/manage-docker/configure-docker-daemon
+      url: ./manage-docker/configure-docker-daemon.md
     - text: コンテナーのオーケストレーション
-      url: /virtualization/windowscontainers/about/overview-container-orchestrators
+      url: ./about/overview-container-orchestrators.md
     - text: Windows コンテナーの必須事項
-      url: /virtualization/windowscontainers/manage-containers/container-base-images
+      url: ./manage-containers/container-base-images.md
 - title: 参照先
   linkLists:
   - linkListType: reference
     links:
     - text: バージョンの互換性
-      url: /virtualization/windowscontainers/deploy-containers/version-compatibility
+      url: ./deploy-containers/version-compatibility.md
     - text: イメージのサービス ライフサイクル
-      url: /virtualization/windowscontainers/deploy-containers/base-image-lifecycle
+      url: ./deploy-containers/base-image-lifecycle.md
     - text: コンテナー OS イメージの EULA
-      url: /virtualization/windowscontainers/images-eula
+      url: ./images-eula.md
 - title: リソース
   linkLists:
   - linkListType: reference
     links:
     - text: サンプル
-      url: /virtualization/windowscontainers/samples
+      url: ./samples.md
     - text: トラブルシューティング
-      url: /virtualization/windowscontainers/troubleshooting
+      url: ./troubleshooting.md
     - text: コミュニティのビデオとブログ
-      url: /virtualization/windowscontainers/communitylinks
+      url: ./communitylinks.md
