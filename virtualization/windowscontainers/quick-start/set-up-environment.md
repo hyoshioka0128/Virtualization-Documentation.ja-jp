@@ -7,12 +7,12 @@ ms.author: crwilhit
 ms.date: 11/12/2019
 ms.topic: quickstart
 ms.assetid: bb9bfbe0-5bdc-4984-912f-9c93ea67105f
-ms.openlocfilehash: b081984fe364b68db3b5f32b6e008e7bdb9f8b09
-ms.sourcegitcommit: 94901df98f58c9ffdf1b9e91379ca13daa239166
+ms.openlocfilehash: 65860acf545f51a8ba86afcef1872191eda86624
+ms.sourcegitcommit: 160405a16d127892b6e2897efa95680f29f0496a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90738902"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990605"
 ---
 # <a name="get-started-prep-windows-for-containers"></a>作業の開始:コンテナー用の Windows を準備する
 
@@ -36,7 +36,7 @@ Windows Server でコンテナーを実行するには、Windows Server (半期�
 Windows 10 でコンテナーを実行するには、以下のものが必要です。
 
 - Anniversary Update (バージョン 1607) 以降を適用した Windows 10 Professional または Enterprise を実行する 1 台の物理コンピューター システム。
-- [Hyper-V](https://docs.microsoft.com/virtualization/hyper-v-on-windows/reference/hyper-v-requirements) を有効にする必要があります。
+- [Hyper-V](/virtualization/hyper-v-on-windows/reference/hyper-v-requirements) を有効にする必要があります。
 
 > [!NOTE]
 >  Windows 10 October Update 2018 以降、開発またはテスト用として、Windows 10 Enterprise または Professional のプロセス分離モードで Windows コンテナーを実行することをユーザーに許可するようになりました。 詳細については、[FAQ](../about/faq.md) に関するページを参照してください。

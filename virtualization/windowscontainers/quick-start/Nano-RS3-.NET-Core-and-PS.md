@@ -4,18 +4,19 @@ description: .NET Core 2.0 または PowerShell Core 6 を使用して、また�
 keywords: Docker, コンテナー
 ms.topic: quickstart
 author: cwilhit
-ms.openlocfilehash: 77c3843faa091ece289992c4af02dbf050cfca55
-ms.sourcegitcommit: bb18e6568393da748a6d511d41c3acbe38c62668
+ms.author: jgerend
+ms.openlocfilehash: a438666c75671e935ce8e8999e92b9c828043d94
+ms.sourcegitcommit: 160405a16d127892b6e2897efa95680f29f0496a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88161681"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990635"
 ---
 # <a name="build-and-run-an-application-with-or-without-net-core-20-or-powershell-core-6"></a>.NET Core 2.0 または PowerShell Core 6 を使用した、または使用しないアプリケーションの構築と実行
 
 このリリースの Nano Server の基本 OS コンテナー イメージでは、.NET Core と PowerShell が削除されていますが、NET Core と PowerShell はいずれも、基本 Nano Server コンテナーの上のアドオン複数層コンテナとしてサポートされています。
 
-コンテナーがネイティブ コードまたは Node.js、Python、Ruby などのオープン フレームワークを実行する場合は、基本 Nano Server コンテナーで十分です。  1 つの小さな相違点として、このリリースは、Windows Server 2016 リリースと比較して、[フット プリントが削減](https://docs.microsoft.com/windows-server/get-started/nano-in-semi-annual-channel)されているため、特定のネイティブ コードが実行できないことがあります。 以前のバージョンにはなかった不具合が発生した場合は、[フォーラム](https://social.msdn.microsoft.com/Forums/home?forum=windowscontainers)を通じてマイクロソフトにお知らせください。
+コンテナーがネイティブ コードまたは Node.js、Python、Ruby などのオープン フレームワークを実行する場合は、基本 Nano Server コンテナーで十分です。  1 つの小さな相違点として、このリリースは、Windows Server 2016 リリースと比較して、[フット プリントが削減](/windows-server/get-started/nano-in-semi-annual-channel)されているため、特定のネイティブ コードが実行できないことがあります。 以前のバージョンにはなかった不具合が発生した場合は、[フォーラム](https://social.msdn.microsoft.com/Forums/home?forum=windowscontainers)を通じてマイクロソフトにお知らせください。
 
 Dockerfile からコンテナーを構築するには docker build を使用し、それを実行するには docker run を使用します。  次のコマンドを実行すると、Nano Server コンテナーの基本 OS イメージがダウンロードされ (数分かかることがあります)、"Hello World!" というメッセージがホストのコンソールに表示されます。
 
@@ -23,7 +24,7 @@ Dockerfile からコンテナーを構築するには docker build を使用し�
 docker run microsoft/nanoserver-insider cmd /c echo Hello World!
 ```
 
-[Dockerfiles on Windows](https://docs.microsoft.com/virtualization/windowscontainers/manage-docker/manage-windows-dockerfile)を使用して、より複雑なアプリケーションを作成できます。また、FROM、RUN、COPY、ADD、CMD などの Dockerfiles 構文を使用できます。この基本イメージから特定のコマンドをすぐに実行することはできませんが、アプリケーションが動作するために必要なものだけを含むコンテナー イメージを作成できるようになりました。
+[Dockerfiles on Windows](../manage-docker/manage-windows-dockerfile.md)を使用して、より複雑なアプリケーションを作成できます。また、FROM、RUN、COPY、ADD、CMD などの Dockerfiles 構文を使用できます。この基本イメージから特定のコマンドをすぐに実行することはできませんが、アプリケーションが動作するために必要なものだけを含むコンテナー イメージを作成できるようになりました。
 
 基本 Nano Server コンテナー OS イメージでは、.NET Core と PowerShell がいずれも利用できないため、圧縮 zip 形式のコンテンツを含むコンテナーの作成方法が 1 つの課題となります。 Docker 17.05 に搭載されている[多段階ビルド](https://docs.docker.com/engine/userguide/eng-image/multistage-build/)機能を使用すると、別のコンテナの PowerShell を利用して、コンテンツを解凍し、Nano コンテナーにコピーできます。 このアプローチを使用すると、.NET Core コンテナーと PowerShell コンテナーを作成することができます。
 

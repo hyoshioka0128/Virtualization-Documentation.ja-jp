@@ -3,15 +3,16 @@ title: Windows 10 上での Linux コンテナーのセットアップ
 description: コンテナー展開のクイック スタート
 keywords: Docker、コンテナー、LCOW
 author: taylorb-microsoft
+ms.author: jgerend
 ms.date: 08/16/2019
 ms.topic: tutorial
 ms.assetid: bb9bfbe0-5bdc-4984-912f-9c93ea67105f
-ms.openlocfilehash: 0e29a8645e34845895fedcc8dc03c01ea12d07f2
-ms.sourcegitcommit: bb18e6568393da748a6d511d41c3acbe38c62668
+ms.openlocfilehash: cec311f86dfafb122c5aad388872555a636f836e
+ms.sourcegitcommit: 160405a16d127892b6e2897efa95680f29f0496a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88161711"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990665"
 ---
 # <a name="get-started-set-up-linux-containers-on-windows-10"></a>作業の開始:Windows 10 上での Linux コンテナーのセットアップ
 
@@ -28,7 +29,7 @@ ms.locfileid: "88161711"
 
 次の要件を満たしていることを確認してください。
 - Windows 10 Professional、Windows 10 Enterprise、または Windows Server 2019 バージョン1809 以降を実行している 1 台の物理コンピューターシステム
-- [Hyper-V](https://docs.microsoft.com/virtualization/hyper-v-on-windows/reference/hyper-v-requirements) は有効にされていることを確認します。
+- [Hyper-V](/virtualization/hyper-v-on-windows/reference/hyper-v-requirements) は有効にされていることを確認します。
 
 ## <a name="install-docker-desktop"></a>Docker Desktop のインストール
 

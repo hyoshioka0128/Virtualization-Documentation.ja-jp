@@ -3,15 +3,16 @@ title: Windows コンテナーの gMSA のトラブルシューティング
 description: Windows コンテナーのグループ管理サービス アカウント (gMSA) のトラブルシューティング方法。
 keywords: docker, コンテナー, active directory, gmsa, グループ管理サービス アカウント, グループ管理サービス アカウント, トラブルシューティング, 解決
 author: rpsqrd
+ms.author: jgerend
 ms.date: 10/03/2019
 ms.topic: troubleshooting
 ms.assetid: 9e06ad3a-0783-476b-b85c-faff7234809c
-ms.openlocfilehash: 771c72ac7b21bf347192ebf88aa86a6cf2c7cddc
-ms.sourcegitcommit: 186ebcd006eeafb2b51a19787d59914332aad361
+ms.openlocfilehash: bffbf326c9a5a7d83625dc4421f8814425a8c680
+ms.sourcegitcommit: 160405a16d127892b6e2897efa95680f29f0496a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87985172"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990905"
 ---
 # <a name="troubleshoot-gmsas-for-windows-containers"></a>Windows コンテナーの gMSA のトラブルシューティング
 
@@ -44,7 +45,7 @@ gMSA を使用してコンテナーを実行しているときにエラーが発
 ### <a name="make-sure-the-host-can-use-the-gmsa"></a>ホストで gMSA を使用できることを確認する
 
 1. ホストがドメインに参加していて、ドメイン コントローラーに到達できることを確認します。
-2. RSAT から AD PowerShell Tools をインストールし、[Test-ADServiceAccount](https://docs.microsoft.com/powershell/module/activedirectory/test-adserviceaccount) を実行して、コンピューターに gMSA を取得するためのアクセス権があるかどうかを確認します。 コマンドレットから **False** が返される場合、コンピューターは gMSA のパスワードにアクセスできません。
+2. RSAT から AD PowerShell Tools をインストールし、[Test-ADServiceAccount](/powershell/module/activedirectory/test-adserviceaccount) を実行して、コンピューターに gMSA を取得するためのアクセス権があるかどうかを確認します。 コマンドレットから **False** が返される場合、コンピューターは gMSA のパスワードにアクセスできません。
 
     ```powershell
     # To install the AD module on Windows Server, run Install-WindowsFeature RSAT-AD-PowerShell
@@ -124,7 +125,7 @@ gMSA を使用してコンテナーを実行しているときにエラーが発
 | TCP 636 | LDAP SSL |
 
 コンテナーからドメイン コントローラーに送信するトラフィックの種類によっては、必要に応じて追加のポートへのアクセスを許可します。
-Active Directory で使用されるポートの完全な一覧については、「[Active Directory および Active Directory Domain Services のポート要件](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd772723(v=ws.10)#communication-to-domain-controllers)」を参照してください。
+Active Directory で使用されるポートの完全な一覧については、「[Active Directory および Active Directory Domain Services のポート要件](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd772723(v=ws.10)#communication-to-domain-controllers)」を参照してください。
 
 ### <a name="check-the-container"></a>コンテナーを確認する
 

@@ -3,13 +3,14 @@ title: コンテナー記憶域の概要
 description: Windows Server コンテナーがホストとその他の種類の記憶域を使用する方法
 keywords: コンテナー, ボリューム, 記憶域, マウント, bindmount
 author: cwilhit
+ms.author: jgerend
 ms.topic: overview
-ms.openlocfilehash: a2d5d3bd3a9682e0c85b0e8a660e1ec2161d68ee
-ms.sourcegitcommit: 1bafb5de322763e7f8b0e840b96774e813c39749
+ms.openlocfilehash: e5cc4770cfa014ca307db1bb7ec4a3bb81c2dd32
+ms.sourcegitcommit: 160405a16d127892b6e2897efa95680f29f0496a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85192279"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990925"
 ---
 # <a name="container-storage-overview"></a>コンテナー記憶域の概要
 
@@ -61,10 +62,10 @@ Windows アプリケーションでは、新しいファイルをインストー
 または、Docker 構成ファイルを直接変更できます。
 
 ```Docker Configuration File
-"storage-opt": [
+"storage-opts": [
     "size=50GB"
   ]
 ```
 
 > [!TIP]
-> この方法は、Docker ビルドにも使用できます。 Docker 構成ファイルの変更について詳しくは、[Docker の構成](https://docs.microsoft.com/virtualization/windowscontainers/manage-docker/configure-docker-daemon#configure-docker-with-configuration-file)ドキュメントをご覧ください。
+> この方法は、Docker ビルドにも使用できます。 Docker 構成ファイルの変更について詳しくは、[Docker の構成](../manage-docker/configure-docker-daemon.md#configure-docker-with-a-configuration-file)ドキュメントをご覧ください。

@@ -3,15 +3,16 @@ title: Windows コンテナー プラットフォーム
 description: Windows で使用できるようになった新しいコンテナーの構成要素について詳しく説明します。
 keywords: LCOW, Linux コンテナー, Docker, コンテナー, containerd, cri, runhcs, runc
 author: scooley
+ms.author: jgerend
 ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: a0e62b32-0c4c-4dd4-9956-8056e9abd9e5
-ms.openlocfilehash: 10f6a453b4c9352763c1e83b126576f250614af4
-ms.sourcegitcommit: 186ebcd006eeafb2b51a19787d59914332aad361
+ms.openlocfilehash: 55c404252dc9243070631e2012326d4b0cca886f
+ms.sourcegitcommit: 160405a16d127892b6e2897efa95680f29f0496a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87985366"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990975"
 ---
 # <a name="container-platform-tools-on-windows"></a>Windows 上のコンテナー プラットフォーム ツール
 
@@ -19,7 +20,7 @@ Windows コンテナー プラットフォームは拡大し続けています�
 
 * [containerd/cri](https://github.com/containerd/cri) - Windows Server 2019 と Windows 10 1809 の新機能。
 * [runhcs](https://github.com/Microsoft/hcsshim/tree/master/cmd/runhcs) - runc に対応する Windows コンテナー ホスト。
-* [hcs](https://docs.microsoft.com/virtualization/api/) - Host Compute Service と、それを使いやすくする便利なシム。
+* [hcs](/virtualization/api/) - Host Compute Service と、それを使いやすくする便利なシム。
   * [hcsshim](https://github.com/microsoft/hcsshim)
   * [dotnet-computevirtualization](https://github.com/microsoft/dotnet-computevirtualization)
 

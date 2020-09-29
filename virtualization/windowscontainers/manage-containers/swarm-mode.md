@@ -3,15 +3,16 @@ title: swarm モードの概要
 description: swarm クラスターの開始、オーバーレイ ネットワークの作成、ネットワークへのサービスのアタッチ。
 keywords: docker,コンテナー, swarm, オーケストレーション
 author: kallie-b
+ms.author: jgerend
 ms.date: 02/9/2017
 ms.topic: how-to
 ms.assetid: 5ceb9626-7c48-4d42-81f8-9c936595ad85
-ms.openlocfilehash: c1377818553d81f4f0230f076c3be3dcad90b9cd
-ms.sourcegitcommit: 186ebcd006eeafb2b51a19787d59914332aad361
+ms.openlocfilehash: 741a04ee9f6b0a079583c1ff800a154457a1e4c2
+ms.sourcegitcommit: 160405a16d127892b6e2897efa95680f29f0496a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87984996"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990645"
 ---
 # <a name="getting-started-with-swarm-mode"></a>swarm モードの概要
 
@@ -28,7 +29,7 @@ swarm モードは、Docker ホストのネイティブなクラスタリング�
 
 ## <a name="swarm-mode-system-requirements"></a>swarm モードのシステム要件
 
-**Windows 10 Creators Update** または **Windows Server 2016** *とすべての最新の更新プログラム\** を実行し、コンテナー ホストとしてセットアップされた (Windows 10 で Docker コンテナーを使い始める方法の詳細については、「[Windows 10 の Windows コンテナー](https://docs.microsoft.com/virtualization/windowscontainers/quick-start/quick-start-windows-10)」または「[Windows Server の Windows コンテナー](https://docs.microsoft.com/virtualization/windowscontainers/quick-start/quick-start-windows-server)」を参照してください) 1 台以上の物理または仮想コンピューター システム (swarm の機能をフルに活用するには、複数ノードの使用をお勧めします)。
+**Windows 10 Creators Update** または **Windows Server 2016** *とすべての最新の更新プログラム\** を実行し、コンテナー ホストとしてセットアップされた (Windows 10 で Docker コンテナーを使い始める方法の詳細については、「[Windows 10 の Windows コンテナー](/virtualization/windowscontainers/quick-start/quick-start-windows-10)」または「[Windows Server の Windows コンテナー](/virtualization/windowscontainers/quick-start/quick-start-windows-server)」を参照してください) 1 台以上の物理または仮想コンピューター システム (swarm の機能をフルに活用するには、複数ノードの使用をお勧めします)。
 
 \***注**:Windows Server 2016 で Docker swarm を使用するには [KB4015217](https://support.microsoft.com/help/4015217/windows-10-update-kb4015217) が必要です。
 
@@ -225,7 +226,7 @@ C:\> docker service create --name=linux_s1 --endpoint-mode dnsrr --network testo
 - Windows Docker ホストの[ルーティング メッシュ](https://docs.docker.com/engine/swarm/ingress/)は、Windows Server 2016 ではサポートされていませんが、Windows Server 2019 以降ではサポートされています。 他の負荷分散方法を使用する場合は、外部のロード バランサー (NGINXなど) を設定したうえで、swarm の[公開ポート モード](https://docs.docker.com/engine/reference/commandline/service_create/#/publish-service-ports-externally-to-the-swarm--p---publish)を使って、負荷分散の際に経由するコンテナー ホスト ポートを公開します。 以下で詳しく説明します。
 
  >[!NOTE]
->Docker Swarm のルーティング メッシュの設定方法の詳細については、この[ブログの投稿](https://docs.microsoft.com/virtualization/community/team-blog/2017/20170926-docker-s-routing-mesh-available-with-windows-server-version-1709)を参照してください。
+>Docker Swarm のルーティング メッシュの設定方法の詳細については、この[ブログの投稿](/virtualization/community/team-blog/2017/20170926-docker-s-routing-mesh-available-with-windows-server-version-1709)を参照してください。
 
 ## <a name="publish-ports-for-service-endpoints"></a>サービス エンドポイントのポートの公開
  サービス エンドポイントのポートを公開する場合、publish-port モードまたは Docker Swarm の[ルーティング メッシュ](https://docs.docker.com/engine/swarm/ingress/)機能を使用して実現できるようになりました。
@@ -261,6 +262,3 @@ Windows では、オーバーレイ ネットワーク ドライバーと透過�
 この問題を回避するには、次の 2 つの方法があります。
 - *オプション 1 - 既存の透過ネットワークを削除する:* swarm を初期化する前に、コンテナー ホストに既存の透過ネットワークがないことを確認します。 透過ネットワークを削除して、ホストに空いている仮想ネットワーク アダプターがあり、オーバーレイのネットワークの作成に使用できることを確認します。
 - *オプション 2 - ホスト上に追加の (仮想) ネットワーク アダプターを作成する:* ホスト上の透過ネットワークを削除するのではなく、オーバーレイ ネットワークの作成に使用される追加のネットワーク アダプターをホスト上に作成できます。 これを行うには、(PowerShell または Hyper-V マネージャーを使用して) 新しい外部ネットワーク アダプターを作成するだけです。新しいインターフェイスが作成されると、swarm が初期化されるときに、ホスト ネットワーク サービス (HNS) が自動的にホスト上のインターフェイスを認識し、そのインターフェイスを使用してオーバーレイ ネットワーク作成用の外部 vSwitch をバインドします。
-
-
-

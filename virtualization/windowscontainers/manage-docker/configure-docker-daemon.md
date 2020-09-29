@@ -3,15 +3,16 @@ title: Windows で Docker を構成する
 description: Windows で Docker を構成する
 keywords: Docker, コンテナー
 author: PatrickLang
+ms.author: jgerend
 ms.date: 05/03/2019
 ms.topic: overview
 ms.assetid: 6885400c-5623-4cde-8012-f6a00019fafa
-ms.openlocfilehash: efec116189d34399567f7520fc67a838e8756116
-ms.sourcegitcommit: 186ebcd006eeafb2b51a19787d59914332aad361
+ms.openlocfilehash: d7d97963633fbcc24db4318f9456e9eee83855f2
+ms.sourcegitcommit: 160405a16d127892b6e2897efa95680f29f0496a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87984925"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990625"
 ---
 # <a name="docker-engine-on-windows"></a>Windows 上の Docker エンジン
 
@@ -222,7 +223,7 @@ Windows 上の Docker/コンテナーに関連付けられている Windows オ�
 これには少なくとも、Windows 10 または Windows Server 2016 で Docker をインストールすると自動的に有効になる "コンテナー" 機能が含まれます。 また、"Hyper-V" 機能も含まれる可能性があります。これは、Windows 10 では Docker のインストール時に自動的に有効になりますが、Windows Server 2016 では明示的に有効にする必要がある機能です。
 
 >[!IMPORTANT]
->[Hyper-V の機能](https://docs.microsoft.com/virtualization/hyper-v-on-windows/about/)には、単なるコンテナーを大幅に超える全般的な仮想化機能が含まれます。 Hyper-V 機能を無効にする前に、この機能を必要とするその他の仮想化コンポーネントがお使いのシステム上にないことを確認してください。
+>[Hyper-V の機能](/virtualization/hyper-v-on-windows/about/)には、単なるコンテナーを大幅に超える全般的な仮想化機能が含まれます。 Hyper-V 機能を無効にする前に、この機能を必要とするその他の仮想化コンポーネントがお使いのシステム上にないことを確認してください。
 
 Windows 10 で Windows 機能を削除するには:
 

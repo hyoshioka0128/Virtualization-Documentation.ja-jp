@@ -6,12 +6,12 @@ author: Heidilohr
 ms.author: helohr
 ms.date: 05/12/2020
 ms.topic: reference
-ms.openlocfilehash: 931810ce871dbcbe0c2cd956f4f6325584693af2
-ms.sourcegitcommit: 186ebcd006eeafb2b51a19787d59914332aad361
+ms.openlocfilehash: 11dbe56b2cd7f2c88d18560d888f520765748c1e
+ms.sourcegitcommit: 160405a16d127892b6e2897efa95680f29f0496a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87985116"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990965"
 ---
 # <a name="base-image-servicing-lifecycles"></a>基本イメージのサービス ライフサイクル
 
@@ -20,7 +20,7 @@ ms.locfileid: "87985116"
 
 Windows コンテナーの基本イメージは、Windows Server の半期チャネル リリースまたは長期サービス チャネル リリースに基づいています。 この記事では、両方のチャネルの基本イメージのさまざまなバージョンについてサポート予定期間を説明します。
 
-半期チャネルでは、機能更新プログラムが年 2 回リリースされます。各リリースのサービス タイムラインは 18 か月です。 これにより、お客様は、アプリケーション (特にコンテナーとマイクロサービスに基づいて構築されたもの) とソフトウェア定義のハイブリッド データセンターの両方で、新しいオペレーティング システムの機能をより迅速に利用できます。 詳細については、「[Windows Server の半期チャネルの概要](https://docs.microsoft.com/windows-server/get-started/semi-annual-channel-overview)」を参照してください。
+半期チャネルでは、機能更新プログラムが年 2 回リリースされます。各リリースのサービス タイムラインは 18 か月です。 これにより、お客様は、アプリケーション (特にコンテナーとマイクロサービスに基づいて構築されたもの) とソフトウェア定義のハイブリッド データセンターの両方で、新しいオペレーティング システムの機能をより迅速に利用できます。 詳細については、「[Windows Server の半期チャネルの概要](/windows-server/get-started/semi-annual-channel-overview)」を参照してください。
 
 Server Core イメージの場合、2、3 年ごとに Windows Server の新しいメジャー バージョンがリリースされる長期サービス チャネルを使用することもできます。 長期サービス チャネルのリリースには、5 年間のメインストリーム サポートと 5 年間の延長サポートが提供されます。 このチャネルは、より長いサービス オプションと機能の安定性が必要なシステムで機能します。
 
@@ -38,4 +38,4 @@ Server Core イメージの場合、2、3 年ごとに Windows Server の新し�
 |Server Core                      |長期        |2016   |14393   |2016 年 10 月 15 日  |2022 年 1 月 11 日                 |2027 年 1 月 11 日           |
 |Nano Server                      |半期      |1607   |14393   |2016 年 10 月 15 日  |2018 年 10 月 9 日                 |なし                  |
 
-サービスの要件とその他の追加情報については、[Windows のライフサイクルの FAQ](https://support.microsoft.com/help/18581/lifecycle-faq-windows-products) に関するページ、「[Windows Server のリリース情報](https://docs.microsoft.com/windows-server/get-started/windows-server-release-info)」、および [Windows 基本 OS イメージの Docker ハブ リポジトリ](https://hub.docker.com/_/microsoft-windows-base-os-images)に関するページを参照してください。
+サービスの要件とその他の追加情報については、[Windows のライフサイクルの FAQ](https://support.microsoft.com/help/18581/lifecycle-faq-windows-products) に関するページ、「[Windows Server のリリース情報](/windows-server/get-started/windows-server-release-info)」、および [Windows 基本 OS イメージの Docker ハブ リポジトリ](https://hub.docker.com/_/microsoft-windows-base-os-images)に関するページを参照してください。

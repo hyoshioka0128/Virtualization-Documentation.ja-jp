@@ -6,12 +6,12 @@ author: cwilhit
 ms.author: crwilhit
 ms.date: 11/12/2019
 ms.topic: quickstart
-ms.openlocfilehash: 956c90b5975f7b290395953fed04a3ed99bf6960
-ms.sourcegitcommit: 186ebcd006eeafb2b51a19787d59914332aad361
+ms.openlocfilehash: e04e4ee4c38409dfd20e4426d586839e1741651e
+ms.sourcegitcommit: 160405a16d127892b6e2897efa95680f29f0496a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87984906"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990655"
 ---
 # <a name="containerize-a-net-core-app"></a>.NET Core アプリをコンテナー化する
 
@@ -133,9 +133,9 @@ Dockerfile が記述されたので、Docker に Dockerfile を指し示して�
 1. 次の手順は、コンテナー化された ASP.NET Web アプリを、Azure Container Registry を使用してプライベート レジストリに発行することです。 この操作で、アプリを組織内でデプロイすることができます。
 
    > [!div class="nextstepaction"]
-   > [プライベート コンテナー レジストリを作成する](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-powershell)
+   > [プライベート コンテナー レジストリを作成する](/azure/container-registry/container-registry-get-started-powershell)
 
-   [コンテナー イメージをレジストリ](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-powershell#push-image-to-registry)にプッシュするセクションに移動したら、コンテナー レジストリ (`my-asp-app`) と共に、パッケージ化したばかりの ASP.NET アプリの名前 (例: `contoso-container-registry`) を指定します。
+   [コンテナー イメージをレジストリ](/azure/container-registry/container-registry-get-started-powershell#push-image-to-registry)にプッシュするセクションに移動したら、コンテナー レジストリ (`my-asp-app`) と共に、パッケージ化したばかりの ASP.NET アプリの名前 (例: `contoso-container-registry`) を指定します。
 
    ```PowerShell
    docker tag my-asp-app contoso-container-registry.azurecr.io/my-asp-app:v1
@@ -146,4 +146,4 @@ Dockerfile が記述されたので、Docker に Dockerfile を指し示して�
 2. アプリをコンテナー レジストリに発行したら、次の手順は、Azure Kubernetes Service で作成する Kubernetes クラスターにアプリをデプロイすることです。
 
    > [!div class="nextstepaction"]
-   > [Kubernetes クラスターを作成する](https://docs.microsoft.com/azure/aks/windows-container-cli)
+   > [Kubernetes クラスターを作成する](/azure/aks/windows-container-cli)

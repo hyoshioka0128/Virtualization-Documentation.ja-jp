@@ -3,13 +3,14 @@ title: Windows コンテナーのバージョンの互換性
 description: Windows の複数のバージョン間で、ビルドとコンテナーを実行する方法について説明します。
 keywords: メタデータ, コンテナー, バージョン
 author: taylorb-microsoft
+ms.author: jgerend
 ms.topic: conceptual
-ms.openlocfilehash: 23319cba426dccba555956f0a8f1204d3669d6bf
-ms.sourcegitcommit: 1bafb5de322763e7f8b0e840b96774e813c39749
+ms.openlocfilehash: 05b63a12554b5ba8c7dd665def5166116a1ee0db
+ms.sourcegitcommit: 160405a16d127892b6e2897efa95680f29f0496a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85192149"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990725"
 ---
 # <a name="windows-container-version-compatibility"></a>Windows コンテナーのバージョンの互換性
 
@@ -226,7 +227,7 @@ FROM mcr.microsoft.com/windows/nanoserver:10.0.17763.437
 ...
 ```
 
-Windows Server 2019 と Windows Server 2016 に基づく Server Core 基本イメージは、[長期サービス チャネル (LTSC)](https://docs.microsoft.com/windows-server/get-started-19/servicing-channels-19#long-term-servicing-channel-ltsc) リリースです。 Server Core イメージのコンテナー OS として、たとえば Windows Server 2019 を使用し、それに対応する最新の修正プログラムを適用したい場合、次のように LTSC リリースを指定することができます。
+Windows Server 2019 と Windows Server 2016 に基づく Server Core 基本イメージは、[長期サービス チャネル (LTSC)](/windows-server/get-started-19/servicing-channels-19#long-term-servicing-channel-ltsc) リリースです。 Server Core イメージのコンテナー OS として、たとえば Windows Server 2019 を使用し、それに対応する最新の修正プログラムを適用したい場合、次のように LTSC リリースを指定することができます。
 
 ```dockerfile
 FROM mcr.microsoft.com/windows/servercore:ltsc2019

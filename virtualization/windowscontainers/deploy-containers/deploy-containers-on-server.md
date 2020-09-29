@@ -3,15 +3,16 @@ title: Windows Server に Windows コンテナーを展開する
 description: Windows Server に Windows コンテナーを展開する
 keywords: Docker, コンテナー
 author: taylorb-microsoft
+ms.author: jgerend
 ms.date: 09/09/2019
 ms.topic: article
 ms.assetid: ba4eb594-0cdb-4148-81ac-a83b4bc337bc
-ms.openlocfilehash: 9bc8071ed5a6a5c8aff385f66299d903ee821070
-ms.sourcegitcommit: 186ebcd006eeafb2b51a19787d59914332aad361
+ms.openlocfilehash: fc2bd93e2582d2cb1a5e77f13babe8a417bb33eb
+ms.sourcegitcommit: 160405a16d127892b6e2897efa95680f29f0496a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87985096"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990955"
 ---
 # <a name="container-host-deployment-windows-server"></a>コンテナー ホストの展開:Windows Server
 
@@ -109,7 +110,7 @@ docker pull mcr.microsoft.com/windows/nanoserver:1803
 
 ## <a name="hyper-v-isolation-host"></a>Hyper-V による分離ホスト
 
-Hyper-V による分離を実行するには、Hyper-V のロールが必要です。 Windows コンテナー ホスト自体が Hyper-V 仮想マシンの場合、Hyper-V ロールをインストールする前に、入れ子になった仮想化を有効にする必要があります。 入れ子になった仮想化の詳細については、「[入れ子になった仮想化](https://docs.microsoft.com/virtualization/hyper-v-on-windows/user-guide/nested-virtualization)」を参照してください。
+Hyper-V による分離を実行するには、Hyper-V のロールが必要です。 Windows コンテナー ホスト自体が Hyper-V 仮想マシンの場合、Hyper-V ロールをインストールする前に、入れ子になった仮想化を有効にする必要があります。 入れ子になった仮想化の詳細については、「[入れ子になった仮想化](/virtualization/hyper-v-on-windows/user-guide/nested-virtualization)」を参照してください。
 
 ### <a name="nested-virtualization"></a>入れ子になった仮想化
 
