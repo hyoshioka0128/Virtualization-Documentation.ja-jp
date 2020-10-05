@@ -3,13 +3,14 @@ title: Windows のコンテナー内のデバイス
 description: Windows 上のコンテナーで存在しているデバイス サポート
 keywords: Docker, コンテナー, デバイス, ハードウェア
 author: cwilhit
+ms.author: jgerend
 ms.topic: how-to
-ms.openlocfilehash: bef8e3236294588e38d7bff235ed1d3a98278375
-ms.sourcegitcommit: 1bafb5de322763e7f8b0e840b96774e813c39749
+ms.openlocfilehash: 8ada973b6e79837374c5f3d918fb4c60da031b49
+ms.sourcegitcommit: 160405a16d127892b6e2897efa95680f29f0496a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85192178"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990945"
 ---
 # <a name="devices-in-containers-on-windows"></a>Windows のコンテナー内のデバイス
 
@@ -31,7 +32,7 @@ ms.locfileid: "85192178"
 docker run --isolation=process --device="class/{interface class GUID}" mcr.microsoft.com/windows/servercore:1809
 ```
 
-`{interface class guid}` は、次のセクションで説明されている適切な[デバイス インターフェイス クラス GUID](https://docs.microsoft.com/windows-hardware/drivers/install/overview-of-device-interface-classes) に置き換える必要があります。
+`{interface class guid}` は、次のセクションで説明されている適切な[デバイス インターフェイス クラス GUID](/windows-hardware/drivers/install/overview-of-device-interface-classes) に置き換える必要があります。
 
 複数のデバイスでコンテナーを起動するには、次のコマンドを使用して、複数の `--device` 引数を結び合わせます。
 
@@ -73,7 +74,7 @@ Windows では、すべてのデバイスで、デバイスが実装するイン
 </tr>
 <tr valign="top">
 <td><center>DirectX GPU アクセラレーション</center></td>
-<td><center><a href="https://docs.microsoft.com/virtualization/windowscontainers/deploy-containers/gpu-acceleration">GPU アクセラレーション</a>に関するドキュメントを参照</center></td>
+<td><center><a href="/virtualization/windowscontainers/deploy-containers/gpu-acceleration">GPU アクセラレーション</a>に関するドキュメントを参照</center></td>
 </tr>
 </tbody>
 </table>

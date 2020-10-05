@@ -3,15 +3,16 @@ title: gMSA を使用してコンテナーを調整する
 description: グループ管理されたサービス アカウント (gMSA) を使用して Windows コンテナーを調整する方法。
 keywords: Docker, コンテナー, Active Directory, gMSA, オーケストレーション, Kubernetes, グループ管理されたサービス アカウント, グループ管理されたサービス アカウント
 author: rpsqrd
+ms.author: jgerend
 ms.date: 09/10/2019
 ms.topic: how-to
 ms.assetid: 9e06ad3a-0783-476b-b85c-faff7234809c
-ms.openlocfilehash: 00bc05d3d96407d19b96620b3b26059f4ac9e313
-ms.sourcegitcommit: 186ebcd006eeafb2b51a19787d59914332aad361
+ms.openlocfilehash: 64a5e5c010922bcc5e61f41c047ac965c4f31415
+ms.sourcegitcommit: 160405a16d127892b6e2897efa95680f29f0496a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87985256"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990895"
 ---
 # <a name="orchestrate-containers-with-a-gmsa"></a>gMSA を使用してコンテナーを調整する
 
@@ -29,7 +30,7 @@ ms.locfileid: "87985256"
 
 アプリケーション マニフェストで資格情報の仕様の場所を指定すると、Service Fabric により、gMSA を使用した Windows コンテナーの実行がサポートされます。 資格情報の仕様ファイルを作成し、各ホストの Docker データ ディレクトリの **CredentialSpecs** サブディレクトリに配置して、Service Fabric がそのファイルを見つけられるようにする必要があります。 [CredentialSpec PowerShell モジュール](https://aka.ms/credspec)の一部である **Get-CredentialSpec** コマンドレットを実行することにより、資格情報の仕様が正しい場所にあるかどうかを確認できます。
 
-「[クイックスタート:Service Fabric に Windows コンテナーをデプロイする](https://docs.microsoft.com/azure/service-fabric/service-fabric-quickstart-containers)」および「[Service Fabric で実行されている Windows コンテナーに対して gMSA を設定する](https://docs.microsoft.com/azure/service-fabric/service-fabric-setup-gmsa-for-windows-containers)」を参照して、アプリケーションの構成方法の詳細についてご確認ください。
+「[クイックスタート:Service Fabric に Windows コンテナーをデプロイする](/azure/service-fabric/service-fabric-quickstart-containers)」および「[Service Fabric で実行されている Windows コンテナーに対して gMSA を設定する](/azure/service-fabric/service-fabric-setup-gmsa-for-windows-containers)」を参照して、アプリケーションの構成方法の詳細についてご確認ください。
 
 ## <a name="how-to-use-gmsa-with-docker-swarm"></a>Docker Swarm で gMSA を使用する方法
 
