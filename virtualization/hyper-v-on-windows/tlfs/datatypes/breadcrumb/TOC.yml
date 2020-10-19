@@ -1,0 +1,7 @@
+- name: ハイパーバイザーの仕様
+  tocHref: /virtualization/hyper-v-on-windows/tlfs/datatypes/
+  topicHref: /virtualization/hyper-v-on-windows/tlfs/tlfs
+  items:
+    - name: データ型
+      tocHref: /virtualization/hyper-v-on-windows/tlfs/datatypes/
+      topicHref: /virtualization/hyper-v-on-windows/tlfs/datatypes/overview

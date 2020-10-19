@@ -1,0 +1,28 @@
+- name: 概要
+  href: tlfs.md
+- name: データ型
+  href: datatypes/overview.md
+- name: 機能の検出
+  href: feature-discovery.md
+- name: ハイパーコール
+  items:
+    - name: インターフェイス
+      href: hypercall-interface.md
+    - name: ハイパーコール リファレンス
+      href: hypercalls/overview.md
+- name: メジャー グループ
+  href: partition-properties.md
+- name: 仮想プロセッサ
+  href: vp-properties.md
+- name: 仮想 MMU
+  href: virtual-mmu.md
+- name: 仮想割り込みコントローラー
+  href: virtual-interrupts.md
+- name: パーティション間通信
+  href: inter-partition-communication.md
+- name: タイマー
+  href: timers.md
+- name: 仮想保護モード
+  href: vsm.md
+- name: 入れ子になった仮想化
+  href: nested-virtualization.md

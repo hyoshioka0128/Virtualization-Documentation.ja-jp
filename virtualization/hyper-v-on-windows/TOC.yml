@@ -1,0 +1,52 @@
+- name: Hyper-V の概要
+  href: ./about/index.md
+- name: Hyper-V をインストールする
+  href: quick-start/enable-hyper-v.md
+- name: 仮想マシンを作成する
+  href: quick-start/quick-create-virtual-machine.md
+- name: Hyper-V を使用した仮想マシンの管理
+  items:
+    - name: Hyper-V と PowerShell
+      href: quick-start/try-hyper-v-powershell.md
+    - name: 仮想マシンとのデバイスの共有
+      href: user-guide/enhanced-session-mode.md
+    - name: チェックポイントの操作
+      href: user-guide/checkpoints.md
+    - name: PowerShell ダイレクトとの接続
+      href: user-guide/powershell-direct.md
+    - name: プレリリース VM の作成
+      href: user-guide/create-pre-release-vm.md
+- name: Hyper-V ホストの管理
+  items:
+    - name: 入れ子になった仮想化の有効化
+      href: user-guide/nested-virtualization.md
+    - name: カスタム VM ギャラリーの構築
+      href: user-guide/custom-gallery.md
+    - name: NAT ネットワークの設定
+      href: user-guide/setup-nat-network.md
+    - name: 仮想スイッチを作成する
+      href: quick-start/connect-to-network.md
+    - name: 統合サービスの構築
+      href: user-guide/make-integration-service.md
+    - name: Hyper-V WMI の移植
+      href: user-guide/refactor-wmiv1-to-wmiv2.md
+- name: リファレンス
+  items:
+    - name: Hyper-V の要件
+      href: reference/hyper-v-requirements.md
+    - name: サポートされているゲスト オペレーティング システム
+      href: about/supported-guest-os.md
+    - name: Hyper-V PowerShell
+      href: 'https://docs.microsoft.com/powershell/module/hyper-v/index?view=win10-ps'
+    - name: Hyper-V 統合サービス
+      href: reference/integration-services.md
+    - name: Hyper-V のアーキテクチャ
+      href: reference/hyper-v-architecture.md
+    - name: ハイパーバイザーの仕様
+      href: tlfs/TOC.yml
+    - name: Hyper-V のバックアップ方法
+      href: reference/HyperVBackupApproaches.md
+- name: コミュニティとサポート
+  items:
+    - name: Hyper-V フォーラム
+      href: 'https://social.technet.microsoft.com/Forums/windowsserver/home?forum=winserverhyperv'

@@ -1,0 +1,7 @@
+- name: ハイパーバイザーの仕様
+  tocHref: /virtualization/hyper-v-on-windows/tlfs/hypercalls/
+  topicHref: /virtualization/hyper-v-on-windows/tlfs/tlfs
+  items:
+    - name: ハイパーコール リファレンス
+      tocHref: /virtualization/hyper-v-on-windows/tlfs/hypercalls/
+      topicHref: /virtualization/hyper-v-on-windows/tlfs/hypercalls/overview
