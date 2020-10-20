@@ -6,12 +6,12 @@ author: Heidilohr
 ms.author: helohr
 ms.date: 05/12/2020
 ms.topic: reference
-ms.openlocfilehash: 11dbe56b2cd7f2c88d18560d888f520765748c1e
-ms.sourcegitcommit: 160405a16d127892b6e2897efa95680f29f0496a
+ms.openlocfilehash: 2e5396dcec67724b850d45cb29010191bba9a732
+ms.sourcegitcommit: 91652cc3ec171e8655bb1a8bc06d433fce457e53
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990965"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92156490"
 ---
 # <a name="base-image-servicing-lifecycles"></a>基本イメージのサービス ライフサイクル
 
@@ -32,7 +32,8 @@ Server Core イメージの場合、2、3 年ごとに Windows Server の新し�
 |Server Core、Nano Server、Windows|半期      |1909   |18363   |2019 年 11 月 12 日  |2021 年 5 月 11 日                 |なし                  |
 |Server Core、Nano Server、Windows|半期      |1903   |18362   |2019 年 5 月 21 日  |2020 年 12 月 8 日                 |なし                  |
 |Server Core                      |長期        |2019   |17763   |2018 年 11 月 13 日  |2024 年 1 月 9 日                 |2029 年 1 月 9 日           |
-|Server Core、Nano Server、Windows|半期      |1809   |17763   |2018 年 11 月 13 日  |2020 年 11 月 10 日                 |なし                  |
+|Nano Server                      |半期      |1809   |17763   |2018 年 11 月 13 日  |2024 年 1 月 9 日                 |なし                  |
+|サーバー コア、Windows             |半期      |1809   |17763   |2018 年 11 月 13 日  |2020 年 11 月 10 日                 |なし                  |
 |Server Core、Nano Server         |半期      |1803   |17134   |2018 年 4 月 30 日  |2019 年 11 月 12 日                 |なし                  |
 |Server Core、Nano Server         |半期      |1709   |16299   |2017 年 10 月 17 日  |2019 年 4 月 9日                 |なし                  |
 |Server Core                      |長期        |2016   |14393   |2016 年 10 月 15 日  |2022 年 1 月 11 日                 |2027 年 1 月 11 日           |
