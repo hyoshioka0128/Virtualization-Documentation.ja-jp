@@ -4,14 +4,14 @@ description: Windows コンテナーの基本イメージのライフサイク�
 keywords: windows コンテナー, コンテナー, ライフサイクル, リリース情報, 基本イメージ, コンテナー基本イメージ
 author: Heidilohr
 ms.author: helohr
-ms.date: 05/12/2020
+ms.date: 10/20/2020
 ms.topic: reference
-ms.openlocfilehash: 2e5396dcec67724b850d45cb29010191bba9a732
-ms.sourcegitcommit: 91652cc3ec171e8655bb1a8bc06d433fce457e53
+ms.openlocfilehash: a5076e0c355090e0487e074191bf706966f9767a
+ms.sourcegitcommit: 530c146a8e43b5cd5ce96b272facb7dd9d3c42da
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92156490"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92238856"
 ---
 # <a name="base-image-servicing-lifecycles"></a>基本イメージのサービス ライフサイクル
 
@@ -28,6 +28,7 @@ Server Core イメージの場合、2、3 年ごとに Windows Server の新し�
 
 |TestVM                       |サービス チャネル|バージョン|OS ビルド|可用性|メインストリーム サポートの終了日|延長サポート日|
 |---------------------------------|-----------------|-------|--------|------------|---------------------------|---------------------|
+|Server Core、Nano Server、Windows|半期      |20H2   |19042   |2020 年 10 月 20 日  |2022 年 5 月 10 日                 |なし                  |
 |Server Core、Nano Server、Windows|半期      |2004   |19041   |2020 年 5 月 27 日  |2021 年 12 月 14 日                 |なし                  |
 |Server Core、Nano Server、Windows|半期      |1909   |18363   |2019 年 11 月 12 日  |2021 年 5 月 11 日                 |なし                  |
 |Server Core、Nano Server、Windows|半期      |1903   |18362   |2019 年 5 月 21 日  |2020 年 12 月 8 日                 |なし                  |

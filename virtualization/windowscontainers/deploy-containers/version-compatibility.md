@@ -1,16 +1,16 @@
 ---
 title: Windows コンテナーのバージョンの互換性
-description: Windows の複数のバージョン間で、ビルドとコンテナーを実行する方法について説明します。
+description: さまざまなバージョンの Windows Server および Windows から構築されたコンテナーのバージョンの互換性。
 keywords: メタデータ, コンテナー, バージョン
 author: taylorb-microsoft
 ms.author: jgerend
 ms.topic: conceptual
-ms.openlocfilehash: 05b63a12554b5ba8c7dd665def5166116a1ee0db
-ms.sourcegitcommit: 160405a16d127892b6e2897efa95680f29f0496a
+ms.openlocfilehash: 0f0f2a3215629cf833e8c6491dfe2c1d38fb1801
+ms.sourcegitcommit: 530c146a8e43b5cd5ce96b272facb7dd9d3c42da
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990725"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92238847"
 ---
 # <a name="windows-container-version-compatibility"></a>Windows コンテナーのバージョンの互換性
 
@@ -21,10 +21,22 @@ Windows コンテナーは、その機能を改善する過程で、互換性に
 ## <a name="windows-server-host-os-compatibility"></a>Windows Server ホスト OS の互換性
 
 <!-- start tab view -->
+# <a name="windows-server-version-20h2"></a>[Windows Server バージョン 20H2](#tab/windows-server-20H2)
+
+|コンテナーの基本イメージの OS バージョン|Hyper-V による分離のサポート|プロセスの分離のサポート|
+|---|:---:|:---:|
+|Windows Server バージョン 20H2|&#10004;|&#10004;|
+|Windows Server バージョン 2004|&#10004;|&#10060;|
+|Windows Server バージョン 1909|&#10004;|&#10060;|
+|Windows Server バージョン 1903|&#10004;|&#10060;|
+|Windows Server 2019|&#10004;|&#10060;|
+|Windows Server 2016|&#10004;|&#10060;|
+
 # <a name="windows-server-version-2004"></a>[Windows Server バージョン 2004](#tab/windows-server-2004)
 
 |コンテナーの基本イメージの OS バージョン|Hyper-V による分離のサポート|プロセスの分離のサポート|
 |---|:---:|:---:|
+|Windows Server バージョン 20H2|&#10060;|&#10060;|
 |Windows Server バージョン 2004|&#10004;|&#10004;|
 |Windows Server バージョン 1909|&#10004;|&#10060;|
 |Windows Server バージョン 1903|&#10004;|&#10060;|
@@ -35,6 +47,7 @@ Windows コンテナーは、その機能を改善する過程で、互換性に
 
 |コンテナーの基本イメージの OS バージョン|Hyper-V による分離のサポート|プロセスの分離のサポート|
 |---|:---:|:---:|
+|Windows Server バージョン 20H2|&#10060;|&#10060;|
 |Windows Server バージョン 2004|&#10060;|&#10060;|
 |Windows Server バージョン 1909|&#10004;|&#10004;|
 |Windows Server バージョン 1903|&#10004;|&#10060;|
@@ -45,6 +58,7 @@ Windows コンテナーは、その機能を改善する過程で、互換性に
 
 |コンテナーの基本イメージの OS バージョン|Hyper-V による分離のサポート|プロセスの分離のサポート|
 |---|:---:|:---:|
+|Windows Server バージョン 20H2|&#10060;|&#10060;|
 |Windows Server バージョン 2004|&#10060;|&#10060;|
 |Windows Server バージョン 1909|&#10060;|&#10060;|
 |Windows Server バージョン 1903|&#10004;|&#10004;|
@@ -55,6 +69,7 @@ Windows コンテナーは、その機能を改善する過程で、互換性に
 
 |コンテナーの基本イメージの OS バージョン|Hyper-V による分離のサポート|プロセスの分離のサポート|
 |---|:---:|:---:|
+|Windows Server バージョン 20H2|&#10060;|&#10060;|
 |Windows Server バージョン 2004|&#10060;|&#10060;|
 |Windows Server バージョン 1909|&#10060;|&#10060;|
 |Windows Server バージョン 1903|&#10060;|&#10060;|
@@ -65,6 +80,7 @@ Windows コンテナーは、その機能を改善する過程で、互換性に
 
 |コンテナーの基本イメージの OS バージョン|Hyper-V による分離のサポート|プロセスの分離のサポート|
 |---|:---:|:---:|
+|Windows Server バージョン 20H2|&#10060;|&#10060;|
 |Windows Server バージョン 2004|&#10060;|&#10060;|
 |Windows Server バージョン 1909|&#10060;|&#10060;|
 |Windows Server バージョン 1903|&#10060;|&#10060;|
@@ -78,10 +94,22 @@ Windows コンテナーは、その機能を改善する過程で、互換性に
 
 <!-- start tab view -->
 
+# <a name="windows-10-version-20h2"></a>[Windows 10、バージョン 20H2](#tab/windows-10-20H2)
+
+|コンテナーの基本イメージの OS バージョン|Hyper-V による分離のサポート|プロセスの分離のサポート|
+|---|:---:|:---:|
+|Windows Server バージョン 20H2|&#10004;|&#10004;|
+|Windows Server バージョン 2004|&#10004;|&#10060;|
+|Windows Server バージョン 1909|&#10004;|&#10060;|
+|Windows Server バージョン 1903|&#10004;|&#10060;|
+|Windows Server 2019|&#10004;|&#10060;|
+|Windows Server 2016|&#10004;|&#10060;|
+
 # <a name="windows-10-version-2004"></a>[Windows 10 バージョン 2004](#tab/windows-10-2004)
 
 |コンテナーの基本イメージの OS バージョン|Hyper-V による分離のサポート|プロセスの分離のサポート|
 |---|:---:|:---:|
+|Windows Server バージョン 20H2|&#10060;|&#10060;|
 |Windows Server バージョン 2004|&#10004;|&#10004;|
 |Windows Server バージョン 1909|&#10004;|&#10060;|
 |Windows Server バージョン 1903|&#10004;|&#10060;|
@@ -92,6 +120,7 @@ Windows コンテナーは、その機能を改善する過程で、互換性に
 
 |コンテナーの基本イメージの OS バージョン|Hyper-V による分離のサポート|プロセスの分離のサポート|
 |---|:---:|:---:|
+|Windows Server バージョン 20H2|&#10060;|&#10060;|
 |Windows Server バージョン 2004|&#10060;|&#10060;|
 |Windows Server バージョン 1909|&#10004;|&#10060;|
 |Windows Server バージョン 1903|&#10004;|&#10060;|
@@ -102,6 +131,7 @@ Windows コンテナーは、その機能を改善する過程で、互換性に
 
 |コンテナーの基本イメージの OS バージョン|Hyper-V による分離のサポート|プロセスの分離のサポート|
 |---|:---:|:---:|
+|Windows Server バージョン 20H2|&#10060;|&#10060;|
 |Windows Server バージョン 2004|&#10060;|&#10060;|
 |Windows Server バージョン 1909|&#10060;|&#10060;|
 |Windows Server バージョン 1903|&#10004;|&#10060;|
@@ -112,6 +142,7 @@ Windows コンテナーは、その機能を改善する過程で、互換性に
 
 |コンテナーの基本イメージの OS バージョン|Hyper-V による分離のサポート|プロセスの分離のサポート|
 |---|:---:|:---:|
+|Windows Server バージョン 20H2|&#10060;|&#10060;|
 |Windows Server バージョン 2004|&#10060;|&#10060;|
 |Windows Server バージョン 1909|&#10060;|&#10060;|
 |Windows Server バージョン 1903|&#10060;|&#10060;|
@@ -133,7 +164,7 @@ Windows Server コンテナーは、コンテナー ホストとコンテナー 
 
 #### <a name="revision-number-patching"></a>リビジョン番号 (修正プログラムの適用)
 
-現在、Windows Server コンテナーでは、コンテナー ホストとコンテナー イメージのリビジョン番号が異なるシステムで Windows Server 2016 ベースのコンテナーを実行するシナリオはサポートされていません。 たとえば、コンテナー ホストのバージョンが 10.0.14393.**1914** (KB4051033 が適用された Windows Server 2016) で、コンテナー イメージのバージョンが 10.0.14393.**1944** (KB4053579 が適用された Windows Server 2016) の場合、イメージは起動しないことがあります。
+現在、Windows Server コンテナーでは、コンテナー ホストとコンテナー イメージのリビジョン番号が異なるシステムで Windows Server 2016 ベースのコンテナーを実行するシナリオはサポートされていません。 たとえば、コンテナー ホストのバージョンが 10.0.14393. **1914** (KB4051033 が適用された Windows Server 2016) で、コンテナー イメージのバージョンが 10.0.14393. **1944** (KB4053579 が適用された Windows Server 2016) の場合、イメージは起動しないことがあります。
 
 ただし、ホストまたはイメージが Windows Server バージョン 1809 以降を使用している場合、このルールは適用されず、ホストとコンテナー イメージのリビジョンが一致している必要はありません。
 
@@ -198,7 +229,7 @@ docker: Error response from daemon: container b81ed896222eb87906ccab1c3dd2fc4932
 このエラーは次の 3 つの方法で解決できます。
 
 - `mcr.microsoft.com/windows/nanoserver` または `mcr.microsoft.com/windows/servercore` の正しいバージョンに基づいて、コンテナーをリビルドする
-- ホストのほうが新しい場合、**docker run --isolation=hyperv ...** を実行する
+- ホストのほうが新しい場合、 **docker run --isolation=hyperv ...** を実行する
 - 同じ Windows バージョンがインストールされた別のホスト上でコンテナーを実行してみる
 
 ## <a name="choose-which-container-os-version-to-use"></a>使用するコンテナー OS バージョンを選択する
@@ -264,7 +295,7 @@ ytnnv80p03xx         \_ angry_liskov.1   microsoft/iis:windowsservercore-10.0.14
 xeqkxbsao57w         \_ angry_liskov.1   microsoft/iis:windowsservercore-10.0.14393.1715   WIN-BSTMQDRQC2E     Shutdown            Failed about a minute ago   "starting container failed: co…"
 ```
 
-`starting container failed: ...` がある場合、**docker service ps --no-trunc (コンテナー名)** を実行することにより、エラー全体を確認できます。
+`starting container failed: ...` がある場合、 **docker service ps --no-trunc (コンテナー名)** を実行することにより、エラー全体を確認できます。
 
 ```dockerfile
 C:\Program Files\Docker>docker service ps --no-trunc angry_liskov
@@ -347,7 +378,7 @@ services:
     docker node update --label-add OsVersion="$((Get-ComputerInfo).OsVersion)" $ENV:COMPUTERNAME
     ```
 
-    その後、**docker node inspect** コマンドを実行すると新しく追加されたラベルが表示されるので、それを確認します。
+    その後、 **docker node inspect** コマンドを実行すると新しく追加されたラベルが表示されるので、それを確認します。
 
     ```yaml
            "Spec": {
@@ -451,7 +482,7 @@ Events:
 
 ### <a name="mitigation---using-node-labels-and-nodeselector"></a>軽減策: ノード ラベルとノード セレクターを使用する
 
-**kubectl get node** を実行して、すべてのノードの一覧を取得します。 その後、**kubectl describe node (ノード名)** を実行して詳細情報を取得します。
+**kubectl get node** を実行して、すべてのノードの一覧を取得します。 その後、 **kubectl describe node (ノード名)** を実行して詳細情報を取得します。
 
 次の例では、2 つの Windows ノードで異なるバージョンが実行されています。
 
