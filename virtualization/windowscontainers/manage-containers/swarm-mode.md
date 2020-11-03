@@ -7,12 +7,12 @@ ms.author: jgerend
 ms.date: 02/9/2017
 ms.topic: how-to
 ms.assetid: 5ceb9626-7c48-4d42-81f8-9c936595ad85
-ms.openlocfilehash: 741a04ee9f6b0a079583c1ff800a154457a1e4c2
-ms.sourcegitcommit: 160405a16d127892b6e2897efa95680f29f0496a
+ms.openlocfilehash: 775de3b2a1b7d0379689ba7f813b662a0ab3959b
+ms.sourcegitcommit: a5cd6c4477a5aee8d2a66c588ac5f799f6e8b035
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990645"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93044300"
 ---
 # <a name="getting-started-with-swarm-mode"></a>swarm モードの概要
 
@@ -20,18 +20,18 @@ ms.locfileid: "90990645"
 swarm モードは、Docker ホストのネイティブなクラスタリングやコンテナー ワークロードのスケジューリングなどのオーケストレーション機能を提供する Docker 機能です。 複数の Docker ホストの Docker エンジンを “swarm モード” で連携して実行すると、それらの Docker ホストで “swarm” クラスターが形成されます。 swarm モードについて詳しくは、[Docker のメイン ドキュメント サイト](https://docs.docker.com/engine/swarm/)を参照してください。
 
 ## <a name="manager-nodes-and-worker-nodes"></a>マネージャー ノードとワーカー ノード
-1 つの swarm は、*マネージャー ノード*と*ワーカー ノード*の 2 種類のコンテナー ホストで構成されます。 すべての swarm はマネージャー ノードを介して初期化され、swarm を制御および監視するためのすべての Docker CLI コマンドは、いずれかのマネージャー ノードから実行する必要があります。 マネージャー ノードは、swarm の状態の ”管理ノード” と考えることができます。マネージャー ノードは連携してコンセンサス・グループを形成し、その swarm で実行されているサービスの状態を常に監視します。マネージャー ノードの役目は、swarm の実際の状態が、開発者や管理者によって定義される意図した状態に常に一致するように維持することがです。
+1 つの swarm は、 *マネージャー ノード* と *ワーカー ノード* の 2 種類のコンテナー ホストで構成されます。 すべての swarm はマネージャー ノードを介して初期化され、swarm を制御および監視するためのすべての Docker CLI コマンドは、いずれかのマネージャー ノードから実行する必要があります。 マネージャー ノードは、swarm の状態の ”管理ノード” と考えることができます。マネージャー ノードは連携してコンセンサス・グループを形成し、その swarm で実行されているサービスの状態を常に監視します。マネージャー ノードの役目は、swarm の実際の状態が、開発者や管理者によって定義される意図した状態に常に一致するように維持することがです。
 
 >[!NOTE]
->swarm は複数のマネージャー ノードを持つことができますが、*1 つ以上*のマネージャー ノードが必要です。
+>swarm は複数のマネージャー ノードを持つことができますが、 *1 つ以上* のマネージャー ノードが必要です。
 
 ワーカー ノードは、マネージャー ノードを介して Docker swarm によってオーケストレーションされます。 ワーカー ノードを swarm に参加させるには、swarm の初期化時にマネージャー ノードで生成された "join トークン" を使う必要があります。 ワーカー ノードは、マネージャー ノードから単純にタスクを単に受信して実行するノードであるため、swarm の状態を認識 (および保持) する必要はありません。
 
 ## <a name="swarm-mode-system-requirements"></a>swarm モードのシステム要件
 
-**Windows 10 Creators Update** または **Windows Server 2016** *とすべての最新の更新プログラム\** を実行し、コンテナー ホストとしてセットアップされた (Windows 10 で Docker コンテナーを使い始める方法の詳細については、「[Windows 10 の Windows コンテナー](/virtualization/windowscontainers/quick-start/quick-start-windows-10)」または「[Windows Server の Windows コンテナー](/virtualization/windowscontainers/quick-start/quick-start-windows-server)」を参照してください) 1 台以上の物理または仮想コンピューター システム (swarm の機能をフルに活用するには、複数ノードの使用をお勧めします)。
+**Windows 10 Creators Update** または **Windows Server 2016** *とすべての最新の更新プログラム\** を実行し、コンテナー ホストとしてセットアップされた (Windows 10 で Docker コンテナーを使い始める方法の詳細については、「 [Windows 10 の Windows コンテナー](../quick-start/set-up-environment.md)」または「 [Windows Server の Windows コンテナー](../quick-start/set-up-environment.md)」を参照してください) 1 台以上の物理または仮想コンピューター システム (swarm の機能をフルに活用するには、複数ノードの使用をお勧めします)。
 
-\***注**:Windows Server 2016 で Docker swarm を使用するには [KB4015217](https://support.microsoft.com/help/4015217/windows-10-update-kb4015217) が必要です。
+\**_注_* :Windows Server 2016 で Docker swarm を使用するには [KB4015217](https://support.microsoft.com/help/4015217/windows-10-update-kb4015217) が必要です。
 
 **Docker Engine v1.13.0 以降**
 
@@ -52,7 +52,7 @@ C:\> docker swarm init --advertise-addr=<HOSTIPADDRESS> --listen-addr <HOSTIPADD
 
 ## <a name="adding-nodes-to-a-swarm"></a>swarm へのノードの追加
 
-swarm モードやオーバーレイ ネットワーク機能の使用には、複数のノードは必要 "*ありません*"。 すべての swarm 機能やオーバーレイ機能は、swarm ノードで実行する 1 つのホスト (つまり、`docker swarm init`コマンドで swarm モードに設定したマネージャー ノード) で使用できます。
+swarm モードやオーバーレイ ネットワーク機能の使用には、複数のノードは必要 " *ありません* "。 すべての swarm 機能やオーバーレイ機能は、swarm ノードで実行する 1 つのホスト (つまり、`docker swarm init`コマンドで swarm モードに設定したマネージャー ノード) で使用できます。
 
 ### <a name="adding-workers-to-a-swarm"></a>swarm へのワーカーの追加
 
@@ -79,7 +79,7 @@ swarm クラスターには、次のコマンドを使って別のマネージ�
 C:\> docker swarm join --token <MANAGERJOINTOKEN> <MANAGERIPADDRESS>
 ```
 
-ここでも、\<MANAGERIPADDRESS\> は swarm マネージャー ノードのローカル IP アドレスです。 join トークン \<MANAGERJOINTOKEN\> は、swarm *マネージャー*の join トークンです。これは既存のマネージャー ノードから次のコマンドのいずれかを実行して取得できます。
+ここでも、\<MANAGERIPADDRESS\> は swarm マネージャー ノードのローカル IP アドレスです。 join トークン \<MANAGERJOINTOKEN\> は、swarm *マネージャー* の join トークンです。これは既存のマネージャー ノードから次のコマンドのいずれかを実行して取得できます。
 
 ```
 # Get the full command required to join a **manager** node to the swarm
@@ -130,7 +130,7 @@ C:\> docker service scale <SERVICENAME>=<REPLICAS>
 swarm と swarm 上で実行しているサービスの状態は、いくつかの便利なコマンドを使って表示できます。
 
 ### <a name="list-swarm-nodes"></a>swarm ノードの一覧表示
-swarm に現在参加しているノードと各ノードの状態情報を一覧表示するには、次のコマンドを使います。 このコマンドは、**マネージャー ノード**から実行する必要があります。
+swarm に現在参加しているノードと各ノードの状態情報を一覧表示するには、次のコマンドを使います。 このコマンドは、 **マネージャー ノード** から実行する必要があります。
 
 ```
 C:\> docker node ls
@@ -139,7 +139,7 @@ C:\> docker node ls
 このコマンドの出力では、1 つのノードにアスタリスク (*) が付いています。このアスタリスクは、単純に現在のノード、つまり `docker node ls` コマンドが実行されたノードを示しています。
 
 ### <a name="list-networks"></a>ネットワークの一覧表示
-特定のノードに存在するネットワークの一覧を表示するには、次のコマンドを使います。 オーバーレイ ネットワークを表示するには、swarm モードで動作する**マネージャー ノード**からこのコマンドを実行する必要があります。
+特定のノードに存在するネットワークの一覧を表示するには、次のコマンドを使います。 オーバーレイ ネットワークを表示するには、swarm モードで動作する **マネージャー ノード** からこのコマンドを実行する必要があります。
 
 ```
 C:\> docker network ls
@@ -190,7 +190,7 @@ C:\> docker node update --label-add <LABELNAME>=<LABELVALUE> <NODENAME>
 
 ここで、`<LABELNAME>` は作成するラベルの名前です。この例では、OS によってノードを区別するため、ラベルの論理名を "os" とすることができます。 `<LABELVALUE>` は、ラベルの値です。この例では、"windows" や "linux" などの値を使用できます (もちろん、一貫性がある限り、ラベルとラベルの値には任意の名前付けを選択できます)。 `<NODENAME>` は、ラベルを付けるノードの名前です。`docker node ls` を実行することによって、ノードの名前を確認できます。
 
-**たとえば**、クラスター内に 4 つの swarm ノードがあり、2 つが Windows ノードで、2 つが Linux ノードである場合、ラベルの更新コマンドは次のようになります。
+**たとえば** 、クラスター内に 4 つの swarm ノードがあり、2 つが Windows ノードで、2 つが Linux ノードである場合、ラベルの更新コマンドは次のようになります。
 
 ```
 # Example -- labeling 2 Windows nodes and 2 Linux nodes in a cluster...
