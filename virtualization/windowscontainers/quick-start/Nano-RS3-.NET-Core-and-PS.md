@@ -5,12 +5,12 @@ keywords: Docker, コンテナー
 ms.topic: quickstart
 author: cwilhit
 ms.author: jgerend
-ms.openlocfilehash: a438666c75671e935ce8e8999e92b9c828043d94
-ms.sourcegitcommit: 160405a16d127892b6e2897efa95680f29f0496a
+ms.openlocfilehash: b7ea858bfe1cb3dd6c3e9ff6e277cf33fdb74aad
+ms.sourcegitcommit: 607413572dce012c2e09263c7b6dd984086cd9ad
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990635"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93074935"
 ---
 # <a name="build-and-run-an-application-with-or-without-net-core-20-or-powershell-core-6"></a>.NET Core 2.0 または PowerShell Core 6 を使用した、または使用しないアプリケーションの構築と実行
 
@@ -21,7 +21,7 @@ ms.locfileid: "90990635"
 Dockerfile からコンテナーを構築するには docker build を使用し、それを実行するには docker run を使用します。  次のコマンドを実行すると、Nano Server コンテナーの基本 OS イメージがダウンロードされ (数分かかることがあります)、"Hello World!" というメッセージがホストのコンソールに表示されます。
 
 ```
-docker run microsoft/nanoserver-insider cmd /c echo Hello World!
+docker run windows/nanoserver/insider cmd /c echo Hello World!
 ```
 
 [Dockerfiles on Windows](../manage-docker/manage-windows-dockerfile.md)を使用して、より複雑なアプリケーションを作成できます。また、FROM、RUN、COPY、ADD、CMD などの Dockerfiles 構文を使用できます。この基本イメージから特定のコマンドをすぐに実行することはできませんが、アプリケーションが動作するために必要なものだけを含むコンテナー イメージを作成できるようになりました。
@@ -31,20 +31,19 @@ docker run microsoft/nanoserver-insider cmd /c echo Hello World!
 PowerShell コンテナー イメージのプルには、次のコマンドを使用できます。
 
 ```
-docker pull microsoft/nanoserver-insider-powershell
+docker pull windows/nanoserver/insider-powershell
 ```
 
 .NET Core コンテナー イメージのプルには、次のコマンドを使用できます。
 
 ```
-docker pull microsoft/nanoserver-insider-dotnet
+docker pull windows/nanoserver/insider-dotnet
 ```
 
 以下では、多段階ビルドを使用して、これらのコンテナー イメージを作成した方法の例を示します。
 
 ## <a name="deploy-apps-based-on-net-core-20"></a>.NET Core 2.0 に基づくアプリの展開
-.NET Core アプリケーションが別の場所に構築されていて、それをコンテナ内で実行しようとする場合は、Insider リリースで .NET Core 2.0 コンテナ イメージを利用して .NET Core アプリを実行できます。  .NET Core コンテナ イメージを使って .NET Core アプリケーションを実行する方法について詳しくは、[.NET Core GitHub](https://github.com/dotnet/dotnet-docker-nightly) をご覧ください。  コンテナー内部にアプリケーションを開発する場合は、.NET Core SDK を代わりに使用する必要があります。  上級ユーザー向けの方法として、.NET Core 2.0 バージョン、Dockerfile、[dotnet docker 夜間](https://github.com/dotnet/dotnet-docker-nightly/tree/master/2.0) で指定された URL を使用して、独自の .NET Core 2.0 コンテナーを構築することができます。 これには、Windows Server Core コンテナーを使用して、機能をダウンロードして解凍します。  Dockerfile のサンプルについては、[.NET Core Runtime Dockerfile](https://github.com/dotnet/dotnet-docker-nightly/blob/master/2.0/runtime/nanoserver-insider/amd64/Dockerfile) をご覧ください。
-
+.NET Core アプリケーションが別の場所に構築されていて、それをコンテナ内で実行しようとする場合は、Insider リリースで .NET Core 2.0 コンテナ イメージを利用して .NET Core アプリを実行できます。  .NET Core コンテナ イメージを使って .NET Core アプリケーションを実行する方法について詳しくは、[.NET Core GitHub](https://github.com/dotnet/dotnet-docker-nightly) をご覧ください。  コンテナー内部にアプリケーションを開発する場合は、.NET Core SDK を代わりに使用する必要があります。  上級ユーザー向けの方法として、.NET Core 2.0 バージョン、Dockerfile、[dotnet docker 夜間](https://github.com/dotnet/dotnet-docker-nightly/tree/master/2.0) で指定された URL を使用して、独自の .NET Core 2.0 コンテナーを構築することができます。 これには、Windows Server Core コンテナーを使用して、機能をダウンロードして解凍します。  Dockerfile のサンプルについては、[.NET Core Runtime Dockerfile](https://github.com/dotnet/dotnet-docker-nightly/blob/master/2.0/runtime) をご覧ください。
 
 この Dockerfile では、次のコマンドを使用して .NET Core 2.0 のコンテナーを作成できます。
 
